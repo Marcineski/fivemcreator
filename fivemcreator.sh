@@ -1,7 +1,8 @@
 echo 'Automatyczne tworzenia serwera FiveM + Baza danych na debian 9 by Itachi Uchiha#8957 / xNick4Name'
 echo 'Wszystkie pliki zostaną zainstalowane w katalogu "home"'
+sleep 2
 
-INSTALACJA="Fivem Baza_Danych Fivem+Baza_danych porzuc"
+INSTALACJA="Fivem Baza_Danych Fivem+Baza_danych help porzuc"
 
 select instaluj in $INSTALACJA
 do
@@ -20,6 +21,8 @@ do
             git clone https://github.com/nick4nameyt/server.cfg.git
             sleep 3
             echo "Serwer został pomyślnie zainstalowany!"
+            sleep 5
+            exit 1
             ;;
         Baza_Danych)
             echo "Instaluje samą baze danych"
@@ -27,6 +30,8 @@ do
             sudo apt -y install phpmyadmin && service apache2 restart && sudo apt -y update && sudo apt -y upgrade && sudo apt update && sudo apt upgrade -y && sudo apt -y install php7.3 && sudo apt -y install php7.3-cli php7.3-fpm php7.3-json php7.3-pdo php7.3-mysql php7.3-zip php7.3-gd  php7.3-mbstring php7.3-curl php7.3-xml php7.3-bcmath php7.3-json && sudo apt install libapache2-mod-php7.3 && sudo apt update && sudo apt upgrade -y && sudo apt update && sudo apt upgrade -y && history -c &
             sudo rm -r php7-3_msql.sh
             echo "Baza danych została pomyślnie zainstalowana!"
+            sleep 5
+            exit 1
             ;;
         Fivem+Baza_danych)
             echo "Instaluje FiveM i baze danych :)"
@@ -50,10 +55,21 @@ do
             echo "Baza danych została pomyślnie zainstalowana!"
             sleep 2
             echo "Miłego korzystania! :D"
+            sleep 5
+            exit 1
+            ;;
+        help)
+            echo "Aby dodać użytkownika do bazy napisz to =\n"
+            echo "mysql -u root -p"
+            echo "CREATE USER 'NAZWA'@'localhost' IDENTIFIED BY 'HASLO';"
+            echo "GRANT ALL PRIVILEGES ON *.* TO 'NAZWA'@'localhost' IDENTIFIED BY 'HASLO';"
+            echo 'quit'
+            sleep 2
+            exit 1
             ;;
         porzuc)
             echo "Porzucam :("
             break;
-                ;;
+            ;;
     esac
 done
