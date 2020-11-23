@@ -1,4 +1,4 @@
-#Fivemcreator
+# Fivemcreator
 
 - Aby nadac permisje wpisujesz -> chmod 777 ./fivemcreator.sh 
 - A potem zeby odpalic wpisujesz ./fivemcreator.sh
