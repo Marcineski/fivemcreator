@@ -1,4 +1,4 @@
-echo 'Automatyczne tworzenia serwera FiveM + Baza danych na debian 9 by Itachi Uchiha#6666'
+echo 'Automatyczne tworzenia serwera FiveM + Baza danych na debian 9 by Marcinek#6666'
 echo 'Wszystkie pliki zostana zainstalowane w katalogu "home"'
 echo -e "Wbij na dc Fivem Scripts: \e[31mhttps://discord.gg/JeQCCEK6\e[0m"
 sleep 2
