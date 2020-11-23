@@ -2,6 +2,7 @@
 
 - Aby nadać permisje wpisujesz -> chmod 777 ./fivemcreator.sh
 - A potem żeby odpalić wpisujesz ./fivemcreator.sh
+- Uzupelnij config i tyle ;D   
 
 ### Jak dodać użytkownika do bazy danych?
 
