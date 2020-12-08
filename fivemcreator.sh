@@ -1,9 +1,9 @@
-echo 'Automatyczne tworzenia serwera FiveM + Baza danych na debian 9 by Marcinek#6666'
+echo 'Automatyczne tworzenia serwera FiveM + Baza danych na debian 9 by Marcinek#5947'
 echo 'Wszystkie pliki zostana zainstalowane w katalogu "home"'
 echo -e "Wbij na dc Fivem Scripts: \e[31mhttps://discord.gg/JeQCCEK6\e[0m"
 sleep 2
 
-INSTALACJA="fivem database fivem+database help"
+INSTALACJA="fivem database fivem+database mysql quit"
 
 select install in $INSTALACJA
 do
@@ -50,6 +50,16 @@ do
             echo "Milego korzystania! :D"
             exit 1
             ;;
+	mysql)
+		echo "Podaj nazwe uzytkownika razem z haslem :D!"
+		echo "Haslo bedzie ukryte podczas podawania"
+		read -sp rootpasswd
+		mysql -uroot -p${rootpasswd} -e "CREATE DATABASE ${MAINDB} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
+		mysql -uroot -p${rootpasswd} -e "CREATE USER ${MAINDB}@localhost IDENTIFIED BY '${PASSWDDB}';"
+		mysql -uroot -p${rootpasswd} -e "GRANT ALL PRIVILEGES ON ${MAINDB}.* TO '${MAINDB}'@'localhost';"
+		mysql -uroot -p${rootpasswd} -e "FLUSH PRIVILEGES;"
+		fi
+		;;
         quit)
             echo "Porzucam :("
             break;
