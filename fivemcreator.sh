@@ -16,6 +16,8 @@ do
             cd /home/fx-server-data
             wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/2539-da65f31986338a670a9b8f57090bf5cc8f879d3a/fx.tar.xz
             cd /home/fx-server-data && tar xf fx.tar.xz
+	    apt install xz-utils
+	    tar -xf fx.tar.xz
             git clone https://github.com/citizenfx/cfx-server-data.git /home/fxserver
             cd /home/fxserver
             rm README.md
@@ -38,6 +40,8 @@ do
             cd /home/fx-server-data
             wget https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/2539-da65f31986338a670a9b8f57090bf5cc8f879d3a/fx.tar.xz
             cd /home/fx-server-data && tar xf fx.tar.xz
+	    apt install xz-utils
+	    tar -xf fx.tar.xz
             git clone https://github.com/citizenfx/cfx-server-data.git /home/fxserver
             cd /home/fxserver
             rm README.md
